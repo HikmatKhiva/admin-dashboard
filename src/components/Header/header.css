@@ -1,0 +1,46 @@
+.css-hip9hq-MuiPaper-root-MuiAppBar-root {
+    background: #FFFFFF !important;
+    box-shadow: 0px 1px 0px #E5E5E5 !important;
+    color: black !important;
+    padding: 0px 30px !important;
+}
+
+/* Search container */
+.search-container {
+    position: relative;
+    width: 50%;
+}
+
+.search-container input {
+    width: 100%;
+    border: none;
+    padding: 8px 10px;
+    background: rgba(1, 0, 57, 0.04);
+    border-radius: 5px;
+    outline: none;
+    font-weight: 500;
+}
+
+.search-btn.MuiButtonBase-root {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+}
+
+/* Account info */
+.account-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Screen 1200px */
+@media screen and (max-width:1400px) {
+    .css-hip9hq-MuiPaper-root-MuiAppBar-root {
+        padding: 0 !important;
+    }
+}
+
+/* Screen 1024px */
+@media screen and (max-width:1024px) {}

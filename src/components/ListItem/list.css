@@ -1,0 +1,12 @@
+.list-item {
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.003em;
+    color: #273240;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 5px;
+}
+.list-item .list-number {
+    opacity: .6;
+}
