@@ -1,18 +1,22 @@
-import * as React from 'react';
+import React, { useContext } from 'react';
 import Box from '@mui/material/Box';
 import { Toolbar, IconButton, AppBar, Badge } from '@mui/material';
 import { Avatar } from '@material-ui/core';
-import { Search, Notifications } from '@mui/icons-material';
-
+import { Search, Notifications, Menu } from '@mui/icons-material';
 import './header.css'
+import { SidebarContext } from '../../context/SidebarContext';
 export default function Header() {
+    const { setSidebar } = useContext(SidebarContext);
     return (
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="static" >
                 <Toolbar>
                     {/* Search input */}
                     <div className="flex-container between items-center">
-                        <div className="search-container">
+                        <div className="search-container ">
+                            <IconButton onClick={() => setSidebar(prev => !prev)} className='open-sidebar'>
+                                <Menu />
+                            </IconButton>
                             <input type='text' placeholder='Search' />
                             <IconButton className='search-btn'>
                                 <Search />

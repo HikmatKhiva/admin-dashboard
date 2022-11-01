@@ -1,7 +1,7 @@
 .MuiInputBase-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.MuiInputBase-adornedEnd.css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root {
     display: flex;
     flex-direction: row-reverse !important;
-    width: 200px;
+    width: 170px;
     border-color: rgba(0, 0, 0, 0.2);
     outline: none;
     cursor: pointer !important;
@@ -34,11 +34,16 @@
     .MuiInputBase-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.MuiInputBase-adornedEnd.css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root {
         width: 170px;
     }
+
     .MuiInputBase-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.MuiInputBase-adornedEnd input::placeholder,
-.MuiInputBase-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.MuiInputBase-adornedEnd input {
-    font-size: 16px;
-}
+    .MuiInputBase-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.MuiInputBase-adornedEnd input {
+        font-size: 16px;
+    }
 }
 
 /* Screen 1024px */
-@media screen and (max-width:1200px) {}
+@media screen and (max-width:1024px) {
+    .MuiInputBase-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.MuiInputBase-adornedEnd.css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root {
+        width: 150px;
+    }
+}

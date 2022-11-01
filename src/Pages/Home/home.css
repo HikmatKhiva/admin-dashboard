@@ -151,6 +151,12 @@
 
 /* Screen 1024px */
 @media screen and (max-width:1024px) {
+    .home-logo {
+        font-size: 20px;
+    }
+    .stat-header__logo {
+        font-size: 18px;
+    }
     .statistic-container {
         gap: 15px;
         height: 900px;
@@ -170,5 +176,8 @@
 
     .statistic::before {
         display: none;
+    }
+    .table-logo,.table-header input {
+        font-size: 18px;
     }
 }

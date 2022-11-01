@@ -1,32 +1,37 @@
-import React from 'react'
-import { Dashboard, ExpandMore, ExpandLess, Menu } from '@mui/icons-material';
+import React, { useContext } from 'react'
+import { Dashboard, ExpandMore, ExpandLess, Menu, Close } from '@mui/icons-material';
 import { Box, Folder } from '../../assets/Icon/exportIcon'
 import './sidebar.css'
 import { IconButton } from '@mui/material';
 import { useState } from 'react';
 import { SidebarDropItem } from '../export';
 import { MenuData, SystemData } from '../../data'
+import { SidebarContext } from '../../context/SidebarContext';
 const Sidebar = () => {
+  const { sideBar,setSidebar } = useContext(SidebarContext)
   const [sidebarDropMenu, setSidebarDropMenu] = useState(false);
   const [sidebarDropSystem, setSidebarDropSystem] = useState(false);
   const [menuSidebar, setMenuSidebar] = useState(false);
 
   return (
-    <div className={`${menuSidebar ? 'sidebar-mobile' : 'sidebar'}`}>
+    <div className={`${menuSidebar ? 'sidebar-mobile' : 'sidebar'} ${sideBar && 'open-sidebar'}`}>
       <div className="sidebar-header">
         <span>Admin Dashboard</span>
-        <IconButton onClick={() => setMenuSidebar(prev => !prev)}>
+        <IconButton className='sidebar-icon' onClick={() => setMenuSidebar(prev => !prev)}>
           <Menu />
+        </IconButton>
+        <IconButton className='sidebar-icon__close' onClick={() => setSidebar(prev => !prev)}>
+          <Close />
         </IconButton>
       </div>
       <div className="sidebar-body">
-        <span  className="sidebar-logo">
+        <span className="sidebar-logo">
           Menu
         </span>
         <div className="sidebar-menu">
-          <span  className="sidebar-menu_logo">
+          <span className="sidebar-menu_logo">
             <Dashboard style={{ width: '30px', height: '30px', color: '#504178' }} />
-            <span  className="sidebar-menu_text">
+            <span className="sidebar-menu_text">
               Dashboard
             </span>
           </span>
@@ -34,7 +39,7 @@ const Sidebar = () => {
             <div className='sidebar-nav__drop'>
               <img src={Box} alt="BoxIcon" />
               <span className="nav-text">Order</span>
-              <IconButton  onClick={() => setSidebarDropMenu(prev => !prev)}>
+              <IconButton onClick={() => setSidebarDropMenu(prev => !prev)}>
                 {sidebarDropMenu ? <ExpandLess /> : <ExpandMore />}
               </IconButton>
             </div>
@@ -50,14 +55,14 @@ const Sidebar = () => {
             <div className='sidebar-nav__drop'>
               <img src={Folder} alt="BoxIcon" />
               <span className="nav-text">Master Data</span>
-              <IconButton  onClick={() => setSidebarDropSystem(prev => !prev)}>
+              <IconButton onClick={() => setSidebarDropSystem(prev => !prev)}>
                 {sidebarDropSystem ? <ExpandLess /> : <ExpandMore />}
               </IconButton>
             </div>
             {/* Sidebar Drop down Item */}
             <div className={`${sidebarDropSystem ? 'show-drop' : 'hidden-drop'}`}>
               {SystemData && SystemData.map(value => (
-                <SidebarDropItem  key={value.id} icon={value.icon} text={value.text} menuSidebar={menuSidebar} />
+                <SidebarDropItem key={value.id} icon={value.icon} text={value.text} menuSidebar={menuSidebar} />
               ))}
             </div>
           </div>
