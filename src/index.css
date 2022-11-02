@@ -4,7 +4,16 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+html,body,#root {
+    width: 100vw;
+    height: 100vh;
+}
+/* Main Styles */
+.for-text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
 .app {
     display: flex;
 }
@@ -14,19 +23,265 @@ main {
     height: 100vh;
     flex-grow: 1;
 }
+
 .flex-container {
     display: flex;
     width: 100%;
 }
-.between{
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.between {
     justify-content: space-between;
 }
+
 .j-center {
     justify-content: center;
 }
+
 .items-center {
     align-items: center;
 }
+
 .flex-col {
     flex-direction: column;
 }
+
+/* Media Responsive */
+
+/* Screen 1200px */
+@media screen and (max-width:1400px) {
+
+    /* Header  */
+    .css-hip9hq-MuiPaper-root-MuiAppBar-root {
+        padding: 0 !important;
+    }
+
+    /* Sidebar */
+    .sidebar-header span {
+        font-size: 20px;
+    }
+
+    /* Sidebar  Nav*/
+    .sidebar-menu_logo svg {
+        width: 25px !important;
+        height: 25px !important;
+    }
+
+    .sidebar-menu_text {
+        font-size: 18px;
+    }
+
+    .sidebar-nav__drop {
+        padding: 0 10px;
+    }
+
+    .sidebar-nav__drop .nav-text {
+        font-size: 16px;
+    }
+
+    .sidebar-drop-item {
+        padding: 10px 20px;
+    }
+
+    .sidebar-drop-item img {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Home Date Sale Item */
+    .data-sale__item img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .sale-item {
+        font-size: 22px;
+    }
+}
+
+/* Screen 1024px */
+@media screen and (max-width:1024px) {
+
+    /* Sidebar */
+    .sidebar-header span {
+        font-size: 18px;
+    }
+
+    /* Sidebar  Nav*/
+    .sidebar-menu_logo svg {
+        width: 22px !important;
+        height: 22px !important;
+    }
+    .sidebar-menu_text {
+        font-size: 14px;
+    }
+
+    .sidebar-nav__drop {
+        padding: 0 10px;
+    }
+
+    .sidebar-nav__drop .nav-text,.sidebar-drop-item .nav-text {
+        font-size: 16px;
+    }
+
+    .sidebar-drop-item {
+        padding: 10px !important;
+    }
+
+    .sidebar-drop-item img {
+        width: 20px;
+        height: 20px;
+    }
+    /* Home */
+    .home-logo {
+        font-size: 20px;
+    }
+    .stat-header__logo {
+        font-size: 18px;
+    }
+    .statistic-container {
+        gap: 15px;
+        height: 900px;
+        flex-wrap: wrap;
+    }
+    .statistic,
+    .statistic-table {
+        width: 100%;
+        height: 50%;
+    }
+
+    .statistic-table {
+        height: 50%;
+        overflow: scroll;
+        position: relative;
+    }
+
+    .statistic::before {
+        display: none;
+    }
+    .table-logo,.table-header input {
+        font-size: 18px;
+    }
+
+    /* Home Date Sale Item */
+    .data-sale__item {
+        padding: 15px 10px;
+        gap: 10px;
+    }
+
+    .data-sale__item img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .sale-item {
+        font-size: 20px;
+    }
+    /* Statistic  */
+    /* Statistic Header Date */
+    .MuiInputBase-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.MuiInputBase-adornedEnd.css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root {
+        width: 150px;
+    }
+}
+
+/* Screen 768px */
+@media screen and (max-width:768px) {
+    .css-hyum1k-MuiToolbar-root {
+        padding: 0 10px !important;
+    }
+
+    /* Sidebar */
+    .open-sidebar {
+        display: block !important;
+    }
+
+    .sidebar {
+        min-height: 200vh;
+        height: 250vh;
+        width: 30%;
+        position: fixed;
+        z-index: 99;
+        left: -100%;
+        transition: all .6s;
+        background-color: #ddd;
+
+    }
+
+    .sidebar.open-sidebar {
+        left: 0;
+    }
+
+    .sidebar-icon__close {
+        display: block !important;
+    }
+
+    .sidebar-icon {
+        display: none !important;
+    }
+
+    .sidebar-body {
+        background-color: #ddd;
+    }
+
+    /* Home Date Sale Item */
+    .home {
+        padding: 10px !important;
+        height: max-content !important;
+        overflow: hidden;
+    }
+    .data-sale {
+        justify-content: space-between;
+    }
+    .data-sale__item {
+        width: calc(50% - 20px) !important;
+        gap: 20px;
+    }
+    .data-sale__item img{
+        width: 60px;
+        height: 60px;
+    }  
+    /* Stat */
+    .stat-header__logo {
+        font-size: 16px;
+    }
+    /* Date Time */
+    .MuiInputBase-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.MuiInputBase-adornedEnd.css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root {
+        width: 140px;
+    }
+    .MuiInputBase-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.MuiInputBase-adornedEnd input {
+        font-size: 14px;
+    }
+     /*Table  */
+     table,.pagination {
+        gap: 0;
+        justify-content: flex-start;
+    }
+
+    table thead tr th, tbody tr td {
+        font-size: 12px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        width: calc(20% - 10px);
+
+    }
+    table tbody tr td {
+        /* display: flex; */
+        width: calc(20% - 10px);
+    }
+    .pagination li button.MuiIconButton-root {
+        font-size: 16px;
+        height: 30px;
+    }
+     .table-logo, .table-header input {
+        font-size: 14px;
+     }
+     
+     .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+        padding: 10px !important;  
+     }
+}
+

@@ -39,29 +39,3 @@
     width: 14px !important;
     height: 14px !important;
 }
-
-/* Screen 1200px */
-@media screen and (max-width:1400px) {
-    .data-sale__item img {
-        width: 60px;
-        height: 60px;
-    }
-    .sale-item {
-        font-size: 22px;
-    }
-}
-
-/* Screen 1024px */
-@media screen and (max-width:1024px) {
-    .data-sale__item {
-        padding: 15px 10px;
-        gap: 10px;
-    }
-    .data-sale__item img {
-        width: 45px;
-        height: 45px;
-    }
-    .sale-item {
-        font-size: 20px;
-    }
-}

@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext,memo } from 'react';
 import Box from '@mui/material/Box';
 import { Toolbar, IconButton, AppBar, Badge } from '@mui/material';
 import { Avatar } from '@material-ui/core';
 import { Search, Notifications, Menu } from '@mui/icons-material';
 import './header.css'
 import { SidebarContext } from '../../context/SidebarContext';
-export default function Header() {
+ function Header() {
     const { setSidebar } = useContext(SidebarContext);
     return (
         <Box sx={{ flexGrow: 1 }}>
@@ -37,3 +37,4 @@ export default function Header() {
         </Box>
     );
 }
+export default memo(Header)

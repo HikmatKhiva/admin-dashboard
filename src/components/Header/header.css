@@ -25,14 +25,12 @@
     outline: none;
     font-weight: 500;
 }
-
 .search-btn.MuiButtonBase-root {
     position: absolute;
     top: 50%;
     right: 5px;
     transform: translateY(-50%);
 }
-
 /* Account info */
 .account-info {
     display: flex;
@@ -40,21 +38,4 @@
     gap: 10px;
 }
 
-/* Screen 1200px */
-@media screen and (max-width:1400px) {
-    .css-hip9hq-MuiPaper-root-MuiAppBar-root {
-        padding: 0 !important;
-    }
-}
 
-/* Screen 1024px */
-@media screen and (max-width:1024px) {}
-/* Screen 768px */
-@media screen and (max-width:768px) {
-    .css-hyum1k-MuiToolbar-root {
-        padding:0 10px !important;
-    }
-    .open-sidebar {
-        display: block !important;
-    }
-}

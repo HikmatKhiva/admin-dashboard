@@ -1,4 +1,3 @@
-import { ArrowUpward } from '@mui/icons-material';
 import { Scredriver, Vector, Report, User, MultiUser } from './assets/Icon/exportIcon';
 import { SaleCar1, SaleCar2, SaleCar3, SaleCar4 } from './assets/Icon/exportIcon';
 // Data Sidebar Nav
@@ -63,7 +62,6 @@ export const SaleData = [
         text: 'Total Customer'
     },
 ]
-
 
 // Statistics Table Data
 export const dataList = [

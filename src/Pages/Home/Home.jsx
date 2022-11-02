@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,me } from 'react';
 import { FormControl, List, MenuItem, Select } from '@mui/material';
 import DateSaleItem from '../../components/DateSaleItem/DateSaleItem';
 import { BasicDateTimePicker, Chart, CustomerTable } from '../../components/export';
@@ -13,9 +13,9 @@ const Home = () => {
   }
   return (
     <div className='home'>
-      <span className='home-logo'>Dashboard</span>
+      <h1 className='home-logo'>Dashboard</h1>
       {/* Sale Data */}
-      <div className="flex-container data-sale">
+      <div className="flex-container data-sale flex-wrap">
         {SaleData && SaleData.map(value => (
           <DateSaleItem  
           key={value.id} 

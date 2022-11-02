@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Loading from '../Loading/Loading';
 import PaginationTable from './PaginationTable';
 import TableItem from './TableItem';
+import { productData } from '../../data';
 import './table.css'
 const CustomerTable = ({ searchUser, customerTableNumber }) => {
     const searchUserArr = [];
@@ -11,9 +12,9 @@ const CustomerTable = ({ searchUser, customerTableNumber }) => {
     useEffect(() => {
         const fetchPost = async () => {
             setLoading(true);
-            const res = await fetch('https://jsonplaceholder.typicode.com/posts');
-            const data = await res.json()
-            setPost(data)
+            // const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+            // const data = await res.json()
+            setPost(productData)
             setLoading(false)
         }
         fetchPost()
@@ -64,7 +65,7 @@ const CustomerTable = ({ searchUser, customerTableNumber }) => {
             <PaginationTable
                 customerTableNumber={customerTableNumber}
                 paginate={paginate}
-                totalPosts={posts.length}
+                totalPosts={productData.length}
                 currentPage={currentPage}
                 paginateNext={paginateNext}
                 paginatePrev={paginatePrev}
